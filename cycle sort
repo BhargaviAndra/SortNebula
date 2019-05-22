@@ -1,0 +1,29 @@
+#include<stdio.h>
+int main()
+{
+ int i,j,x[4],y[4],count,b,d[4],e,k=0,f;
+ for(i=0;i<4;i++)
+ scanf("%d",&x[i]);//key
+for(i=0;i<4;i++)
+scanf("%d",&y[i]);//value
+for(i=0;i<4;i++)
+{while(x[count]!=x[i])
+   {count=0;
+   for(j=0;j<4;j++)
+   {
+       if(x[i]>x[j])
+       count++;
+   }
+   b=x[count];
+   e=y[count];
+   x[count]=x[i];
+   y[count]=y[i];
+   x[i]=b;
+   y[i]=e;
+   }
+   }
+      
+   for(i=0;i<4;i++)
+   printf("%d %d\n",x[i],y[i]);
+return 0;      
+}
